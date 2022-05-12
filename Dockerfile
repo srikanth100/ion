@@ -1,4 +1,4 @@
-DockerfileFROM ubuntu:20.04 as builder
+FROM ubuntu:20.04 as builder
 
 ## Install build dependencies.
 RUN apt-get update && \
