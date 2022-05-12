@@ -1,0 +1,5 @@
+project: ion
+target: parser
+
+cmds:
+  - cmd: /parser

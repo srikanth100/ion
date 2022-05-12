@@ -1,6 +1,6 @@
 mod case;
 mod functions;
-mod parse;
+pub mod parse;
 mod splitter;
 
 pub use self::{

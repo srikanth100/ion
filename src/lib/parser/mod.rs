@@ -16,9 +16,13 @@ pub use self::{
     statement::{parse_and_validate, Error, StatementSplitter},
 };
 
+/// Fuzz method
 #[cfg(fuzzing)]
 pub mod fuzzing {
     use super::*;
-
-    pub fn statement_parse(data: &str) { statement::parse::parse(data); }
+    use crate::{
+        builtins::BuiltinMap,
+    };
+    /// Fuzz parse
+    pub fn statement_parse(data: &str) { statement::parse::parse(data, &BuiltinMap::new()); }
 }
